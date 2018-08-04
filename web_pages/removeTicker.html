@@ -1,0 +1,18 @@
+<div ng-controller="ngRemoveTicker">
+
+            <div class="container">
+                <h1 class="jumbotron container-fluid">Remove Stock Ticker</h1>
+                <br>
+            </div>
+            <form class="container">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Remove Stock Ticker from watchlist</label>
+                    <input type="text" class="form-control" ng-model="stockTickerAdder" name="stockTicker" id="exampleInputEmail1" placeholder="Enter stock Ticker">
+                    <small id="emailHelp" class="form-text text-muted">NYSE Stock Ticker</small>
+                </div>
+                <button type="submit" class="btn btn-primary" ng-click="removeClick()">Remove</button>
+            </form>
+    
+            <div class="container" ng-class="'alert-' + (alert.type || 'success')" uib-alert type="sucess" close="closeAlert()" ng-if="show" dismiss-on-timeout="3000">Successfully removed from the watchlist.</div>
+            <div class="container" ng-class="'alert-' + (alert.type || 'danger')" uib-alert type="danger" close="closeAlert2()" ng-if="show2" dismiss-on-timeout="3000">Error removing Ticker from the portfolio.</div>
+    </div>

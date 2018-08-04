@@ -1,0 +1,38 @@
+<html ng-app="ngModule">
+<!-- https://arzktrqj0a.execute-api.us-east-1.amazonaws.com/PROD/{ticker} -->
+<head>
+        <script src="/socket.io.js"></script>
+        <script>
+            
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+        <script src="/app.js"></script>
+        <script src="/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script>
+ 
+    </script>
+</head>
+
+<body>
+                <div class="container" ng-controller="maincontroller">
+                                <div class="navbar navbar-inverse">
+                                <nav>
+                                    <a href="#" style="padding: 10px" ng-click="removeRefresh()">Home</a>
+                                    <a href="#" style="padding: 10px" ng-click="removeRefresh()">Portfolio</a>
+                                    <a href="http://localhost:8007/#!/ticker" style="padding: 10px" ng-click="removeRefresh()">Add Ticker</a>
+                                    <a href="http://localhost:8007/#!/removeticker" style="padding: 10px" ng-click="removeRefresh()">Remove Ticker</a>
+                                    <a href="http://localhost:8007/#!/portfolio" ng-click="removeRefresh()">Watchlist</a>
+                                    <a href="#" style="padding: 10px">Contact Me</a>
+                        <!--            <a href="#" style="text-align: right;padding: 340px;">Login</a> -->
+                                </nav>
+                                </div>
+                </div>
+        <ng-view></ng-view>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+
+<div ng-controller="ngController">
+
+        <div class="container">
+            <h1 class="jumbotron">Batman's Stock Portfolio</h1>
+            <br>
+        </div>
+        <form class="container">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Stock Ticker</label>
+                <input type="text" class="form-control" ng-model="stockTicker" name="stockTicker" id="exampleInputEmail1" placeholder="Enter stock Ticker">
+                <small id="emailHelp" class="form-text text-muted">NYSE Stock Ticker</small>
+            </div>
+            <button type="submit" class="btn btn-primary" ng-click="submitClick()">Submit</button>
+            <p id="gowthamshankar"></p>
+
+        </form>
+        <div class="container">
+        <table class="table">
+            <thead style="background-color:#808080;">
+                <tr>
+                    <td>Ticker</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="spa in SpriceArray track by $index" ng-show="tableFlag">
+                    <td>{{tableTicker}}</td>
+                    <td>{{spa}}</td>
+                </tr>
+            </tbody>
+    
+        </table>
+    </div>
+</div>

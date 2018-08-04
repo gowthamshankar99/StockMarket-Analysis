@@ -1,0 +1,38 @@
+
+
+<div ng-controller="ngPortfolio">
+
+
+
+    <div class="container">
+        <h1 class="jumbotron">Batman's Stock Watchlist</h1>
+    </div>
+    <form class="container">
+    </form>
+    <div class="container">
+    <table class="table" id="myTable">
+        <thead style="background-color:#808080;">
+            <tr>
+                <td>Ticker</td>
+                <td>Price</td>  
+                <td>High</td>
+                <td>Low</td>
+                <td>Volume</td>
+                <td>Previous-close</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="tn in tickerNames | orderBy : 'ticker'">
+                <td ng-style="{background: (tn['previousClose'] > tn['close'] ? '#E94B3C' : '#92B558')}">{{tn['ticker']}}</td>
+                <td ng-style="{color: (tn['previousClose'] > tn['close'] ? 'red' : 'green')}">{{tn['close']}}</td>
+                <td ng-style="{color: (tn['previousClose'] > tn['close'] ? 'red' : 'green')}">{{tn['high']}}</td>
+                <td ng-style="{color: (tn['previousClose'] > tn['close'] ? 'red' : 'green')}">{{tn['low']}}</td>
+                <td ng-style="{color: (tn['previousClose'] > tn['close'] ? 'red' : 'green')}">{{tn['volume']}}</td>
+                <td ng-style="{color: (tn['previousClose'] > tn['close'] ? 'red' : 'green')}">{{tn['previousClose']}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+ <!--   {{gowthamshankar22}} -->
+</div>
+</div>
